@@ -1,0 +1,45 @@
+<!-- <header><p>{{profile}}</p>
+  <button type="button" id="lgt-btn">Logout</button>
+</header>
+
+<form>
+  <input type="text" name="text" id="txt" required />
+  <button type="submit" class="btn-list">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+  </button>
+</form>
+<div class="container">
+  <ul>
+  </ul>
+</div>
+<script src="script.js"></script> -->
+<div class="container">
+  <form>
+  <label for="category">Category:</label>
+  <select id="category" class="browser-default" onfocus="displayOptions()">
+   <option value="" disabled selected>Select the category..</option>
+  </select>
+
+
+  <label for="lname">Description:</label><br />
+  <input type="text" id="lname" name="lname" value="" /><br /><br />
+  <form>
+    <input type="text" name="text" id="txt" placeholder="Title" required />
+    <button type="submit" class="btn-list">
+      <i class="fa fa-plus" aria-hidden="true" id="postItem"></i>
+    </button>
+  </form>
+</form>
+<div class="container">
+  {{#if items.length}}
+  {{#each items as |item|}}
+  {{> item-details}}
+  {{/each}}
+  {{/if}}
+
+</div>
+
+</div>
+
+<script src="./js/profile.js"></script>
+<script src="./js/searchItems.js"></script>

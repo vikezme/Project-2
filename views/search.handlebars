@@ -1,0 +1,62 @@
+<div class="container center">
+  <div class="row">
+  <h3 class="flow-text">Search for items you can exchange your items with</h3>
+  <div class="col s12">
+    <label>Search by Category</label>
+  <select id="category" class="browser-default" onfocus="displayOptions()" onchange="displayResults()">
+   <option value="" disabled selected>I am looking for...</option>
+  </select>
+  </div>
+</div>
+
+<div class="row" id="displayDiv">
+
+{{#each editedItems as |i|}}
+<div class="col s12 m4">
+      <!---->
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/{{i.category_id}}.jpg">
+          <span class="card-title">{{i.title}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red" href="/item/{{i.id}}"><i class="material-icons">zoom_in</i></a>
+        </div>
+        <div class="card-content">
+          <p class="truncate">{{i.description}}</p>
+        </div>
+      </div>
+      <!---->
+    </div>
+{{/each}}
+
+</div>
+
+</div>
+
+<script src="/js/searchItems.js"></script>
+
+
+
+
+
+
+
+{{!-- <div class="row"> --}}
+{{!-- 
+{{#each editedItems as |i|}}
+<div class="col s12 m3">
+      <!---->
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/strawberry.jpg">
+          <span class="card-title">{{i.title}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red" href="/item/{{i.id}}"><i class="material-icons">zoom_in</i></a>
+        </div>
+        <div class="card-content">
+          <p class="truncate">{{i.description}}</p>
+        </div>
+      </div>
+      <!---->
+    </div>
+{{/each}}
+
+</div> --}}
